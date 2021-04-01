@@ -1,0 +1,12 @@
+{
+  "name": "qrscannerapp",
+  "displayName": "qrscannerapp",
+  "expo": {
+    "name": "qrscannerapp",
+    "slug": "qrscannerapp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
