@@ -35,3 +35,29 @@ React native qrscanner
 ```
 
 ## Kullanımı :
+```
+<QRCodeScanner
+            onRead={this.onSuccess} 
+            //flashMode={RNCamera.Constants.FlashMode.torch}
+            reactivate={true}
+            showMarker={true}
+            cameraType={"back"}
+            markerStyle={styles.markerS}
+            topContent={
+              <Text style={styles.ustBilgi}> Bu bir üst bilgidir. </Text>
+            }
+            bottomContent={
+              <TouchableOpacity style={styles.buttonTouchable} onPress={this.onPress} >
+                <Text style={styles.altBilgi}> -> Tıklayınız <- </Text>
+              </TouchableOpacity>
+            }
+            cameraStyle={[{height: SCREEN_HEIGHT, width: SCREEN_WIDTH, zIndex: -9}]}
+        />
+```
+### Qrscanner ile neler yapabiliriz:
+* reactivate -> Yalnızca bir kez qr okutmak istiyorsak bu özelliği 'false' olarak ayarlamalıyız. Ancak qr okutmaya devam etmek için 'true' olarak ayarlamalıyız.
+* showMarker -> Kamerada qr okutma alanı olarak gösterebileceğimiz bir çerçeve ekleyebiliriz. 
+* cameraType -> Kamera tipi varsayılan olarak 'back' gelmekte ancak 'front' yazarak ön kamerayı açabiliriz.
+* markerStyle={styles.markerStili} -> Eklediğimiz çerceveyi özelleştirebiliriz.
+* topContent -> Kameranın üst kısmına bir şey eklemek istiyorsak kullanabiliriz.
+* bottomContent -> Kameranın alt kısmına bir şey eklemek istiyorsak kullanabiliriz.
